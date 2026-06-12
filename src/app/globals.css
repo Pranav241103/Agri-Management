@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full Screen Layout */
+html,
+body,
+#__next {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+  background: #f5f7fb;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inputs */
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive Containers */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Fix Flex Layout Overflow */
+.flex-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.content-area {
+  flex: 1;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Cards */
+.card {
+  width: 100%;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Sidebar Safe Width */
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+  }
+}
+
+/* Mobile Fix */
+@media (max-width: 640px) {
+  html,
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+/* Smooth Animations */
+* {
+  transition: all 0.2s ease-in-out;
+}
